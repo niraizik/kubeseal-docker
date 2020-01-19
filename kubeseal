@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+docker run -it --rm \
+ -v ~/.kube/config:/root/.kube/config \
+ -v ~/.aws:/root/.aws \
+ -e AWS_PROFILE=${AWS_PROFILE} \
+ niraizik/kubeseal "$@"
